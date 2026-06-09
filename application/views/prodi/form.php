@@ -125,7 +125,15 @@
 						<?php endif; ?>
 					</div>
 
-					
+					<div class="d-flex gap-2">
+						<button type="submit" class="btn btn-primary">
+							<?php echo isset($button) ? $button : 'Simpan'; ?>
+						</button>
+
+						<a href="<?php echo base_url('prodi') ?>" class="btn btn-secondary">
+							Batal
+						</a>
+					</div>
 
 				</form>
 
