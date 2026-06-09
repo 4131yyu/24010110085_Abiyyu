@@ -18,7 +18,24 @@
 					</tr>
 				</thead>
 
-				
+				<tbody>
+					<?php foreach ($fakultas as $key => $value): ?>
+						<tr>
+							<td><?php echo $key + 1 ?>.</td>
+							<td><?php echo $value['fakultas_id'] ?></td>
+							<td><?php echo $value['fakultas_name'] ?></td>
+							<td>
+								<a class="btn btn-warning btn-sm" href="<?php echo base_url('fakultas/ubah/'.$value['fakultas_id']) ?>">
+									<i class="bi bi-pencil-square"></i>
+								</a>
+
+								<a class="btn btn-danger btn-sm btn-hapus" href="<?php echo base_url('fakultas/hapus/'.$value['fakultas_id']) ?>">
+									<i class="bi bi-trash"></i>
+								</a>
+							</td>
+						</tr>
+					<?php endforeach ?>
+				</tbody>
 
 			</table>
 		</div>
