@@ -72,7 +72,7 @@ class Fakultas extends CI_Controller
         }
 
         if ($this->input->post()) {
-            $this->form_validation->set_rules('fakultas_name', 'Nama', 'required|min_length[3]|max_length[100]');
+            $this->form_validation->set_rules('fakultas_name', 'Nama Fakultas', 'required|min_length[3]|max_length[100]');
 
             if ($this->form_validation->run() === TRUE) {
                 $formulir = $this->input->post();
@@ -81,16 +81,14 @@ class Fakultas extends CI_Controller
                     'fakultas_name' => $formulir['fakultas_name'],
                 ];
 
-                if (!empty($formulir['mahasiswa_password'])) {
-                    $data['mahasiswa_password'] = sha1($formulir['mahasiswa_password']);
-                }
+                
 
-                $this->MahasiswaModel->update($id, $data);
+                $this->FakultasModel->update($id, $data);
 
                 $this->session->set_flashdata('swal', [
                     'icon' => 'success',
                     'title' => 'Berhasil!',
-                    'text' => 'Data mahasiswa berhasil diupdate.'
+                    'text' => 'Data Fakultas berhasil diupdate.'
                 ]);
 
                 redirect('fakultas');
