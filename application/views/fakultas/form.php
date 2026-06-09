@@ -60,8 +60,8 @@
 
 					<div class="d-flex gap-2">
 						<button type="submit" class="btn btn-primary">
-							<?php echo isset($button) ? $button : 'Simpan'; ?>
-						</button>
+                            <?php echo isset($button) ? $button : 'simpan'; ?>
+                        </button>
 
 						<a href="<?php echo base_url('fakultas') ?>" class="btn btn-secondary">
 							Batal
