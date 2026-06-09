@@ -26,7 +26,7 @@ class Fakultas extends CI_Controller
     public function tambah()
     {
         if ($this->input->post()) {
-            $this->form_validation->set_rules('fakultas_name', 'Nama', 'required|min_length[3]|max_length[100]');
+            $this->form_validation->set_rules('fakultas_name', 'Nama Fakultas', 'required|min_length[3]|max_length[100]');
 
             if ($this->form_validation->run() === TRUE) {
                 $formulir = $this->input->post();
