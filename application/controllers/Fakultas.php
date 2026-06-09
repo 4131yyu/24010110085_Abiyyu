@@ -26,12 +26,13 @@ class Fakultas extends CI_Controller
     public function tambah()
     {
         if ($this->input->post()) {
+            $this->form_validation->set_rules('fakultas_id','ID Fakultas','required|numeric');
             $this->form_validation->set_rules('fakultas_name', 'Nama Fakultas', 'required|min_length[3]|max_length[100]');
-
             if ($this->form_validation->run() === TRUE) {
                 $formulir = $this->input->post();
 
                 $data = [
+                    'fakultas_id' => $formulir['fakultas_id'],
                     'fakultas_name' => $formulir['fakultas_name'],
                 ];
 
@@ -72,12 +73,14 @@ class Fakultas extends CI_Controller
         }
 
         if ($this->input->post()) {
+            $this->form_validation->set_rules('fakultas_id','ID Fakultas','required|numeric');
             $this->form_validation->set_rules('fakultas_name', 'Nama Fakultas', 'required|min_length[3]|max_length[100]');
 
             if ($this->form_validation->run() === TRUE) {
                 $formulir = $this->input->post();
 
                 $data = [
+                    'fakultas_id' => $formulir['fakultas_id'],
                     'fakultas_name' => $formulir['fakultas_name'],
                 ];
 
