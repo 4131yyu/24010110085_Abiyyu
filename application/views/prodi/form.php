@@ -96,7 +96,16 @@
 							<label class="form-check-label">D3</label>
 						</div>
 
-						
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="radio"
+								name="prodi_strata"
+								value="S1"
+								<?php echo set_radio('prodi_strata', 'S1', isset($prodi['prodi_strata']) && $prodi['prodi_strata'] == 'S1'); ?>>
+
+							<label class="form-check-label">S1</label>
+						</div>
 
 						<div class="form-check form-check-inline">
 							<input
