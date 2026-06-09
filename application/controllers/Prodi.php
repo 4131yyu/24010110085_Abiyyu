@@ -140,24 +140,19 @@ class Prodi extends CI_Controller {
         $prodi = $this->ProdiModel->getById($id);
 
         if (!$prodi) {
-
             $this->session->set_flashdata('swal', [
                 'icon' => 'warning',
-                'title' => 'Tidak Ditemukan!',
-                'text' => 'Data program studi tidak ditemukan.'
+                'title' => 'Tidak Ditemukan',
+                'text' => 'Data program studi tidak  ditemukan'
             ]);
-
             redirect('prodi');
         }
-
         $this->ProdiModel->delete($id);
-
         $this->session->set_flashdata('swal', [
-            'icon' => 'warning',
-            'title' => 'Dihapus!',
-            'text' => 'Data program studi berhasil dihapus.'
+            'icon' => 'Warning',
+            'title' => "Dihapus",
+            'text' => 'Data program studi berhasil di hapus'
         ]);
-
         redirect('prodi');
     }
 }
